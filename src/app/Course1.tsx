@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { router } from '../../.expo/types/router';
+// 1. Correct import for runtime navigation
+import { router } from 'expo-router'; 
 
 export default function Course1Screen() {
   return (
@@ -20,27 +21,36 @@ export default function Course1Screen() {
           resizeMode="cover" 
         />
 
-
         <View style={styles.coursesBanner}>
           <Text style={styles.bannerText}>Six-Month Course</Text>
         </View>
 
         <View style={styles.blackSection}>
           
-          <TouchableOpacity style={styles.blueButton}>
+         
+          <TouchableOpacity 
+            style={styles.blueButton}
+            onPress={() => router.push('/C1-Class1')}
+          >
             <Text style={styles.buttonText}>canine obedience training</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.blueButton}>
+          <TouchableOpacity style={styles.blueButton}
+            onPress={() => router.push('/C1-Class2')}
+          >
             <Text style={styles.buttonText}>Pet Grooming</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.blueButton}>
+          <TouchableOpacity style={styles.blueButton}
+            onPress={() => router.push('/C1-Class3')}
+          >
             <Text style={styles.buttonText}>Animal Behaviour</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.blueButton}>
-            <Text style={styles.buttonText}>Pet Mnagement Business</Text>
+          <TouchableOpacity style={styles.blueButton}
+            onPress={() => router.push('/C1-Class4')}
+          >
+            <Text style={styles.buttonText}>Pet Management Business</Text>
           </TouchableOpacity>
 
         </View>

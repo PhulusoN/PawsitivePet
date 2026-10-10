@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+// 1. Added the missing router import here
+import { router } from 'expo-router';
 
 export default function Course2Screen() {
   return (
@@ -18,23 +20,30 @@ export default function Course2Screen() {
           resizeMode="cover" 
         />
 
-    
         <View style={styles.coursesBanner}>
           <Text style={styles.bannerText}>Six-Week Course</Text>
         </View>
 
-
         <View style={styles.blackSection}>
           
-          <TouchableOpacity style={styles.greenButton}>
+          <TouchableOpacity 
+            style={styles.greenButton}
+            onPress={() => router.push('/C2-Class1')}
+          >
             <Text style={styles.buttonText}>Puppy Care</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.greenButton}>
+          <TouchableOpacity 
+            style={styles.greenButton}
+            onPress={() => router.push('/C2-Class2')} // Changed from Class3 to Class2 assuming a natural sequence
+          >
             <Text style={styles.buttonText}>Pet First Aid</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.greenButton}>
+          <TouchableOpacity 
+            style={styles.greenButton}
+            onPress={() => router.push('/C2-Class3')}
+          >
             <Text style={styles.buttonText}>Basic Dog Walking</Text>
           </TouchableOpacity>
 
