@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
-
 import { useRouter } from 'expo-router';
-
 export default function SignUpScreen() {
   const router = useRouter();
   

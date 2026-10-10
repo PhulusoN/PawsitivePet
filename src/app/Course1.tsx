@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-// 1. Correct import for runtime navigation
 import { router } from 'expo-router'; 
 
 export default function Course1Screen() {
@@ -14,7 +13,7 @@ export default function Course1Screen() {
           <Text style={styles.headerText}>Our Courses</Text>
         </View>
 
-        {/* Hero Image */}
+      
         <Image 
           source={require('@/assets/images/Course1.jpg')} 
           style={styles.heroImage} 

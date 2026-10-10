@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { useRouter } from 'expo-router'; // 1. Import the router
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
-  const router = useRouter(); // 2. Initialize the router
+  const router = useRouter(); 
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        {/* Header */}
+      
         <View style={styles.header}>
           <Text style={styles.headerText}>Welcome to Pawsitive Academy</Text>
         </View>
@@ -24,7 +24,7 @@ export default function HomeScreen() {
         <View style={styles.blackSection}>
           <Image source={require('@/assets/images/Course1.jpg')} style={styles.courseImage} resizeMode="cover" />
           
-          {/* 3. Add onPress to navigate to the 'Course1' file */}
+         
           <TouchableOpacity 
             style={[styles.button, styles.blueButton]}
             onPress={() => router.push('/Course1')}

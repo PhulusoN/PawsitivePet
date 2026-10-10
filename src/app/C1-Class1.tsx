@@ -7,38 +7,35 @@ const { width } = Dimensions.get('window');
 export default function CoursesScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* Hide default header to use the custom design */}
       <Stack.Screen options={{ headerShown: false }} />
 
       <ScrollView style={styles.container} bounces={false}>
-        
-        {/* 1. Header Banner */}
+      
         <View style={styles.header}>
           <Text style={styles.headerText}>Our Courses</Text>
         </View>
 
-        {/* 2. Dog Banner Image */}
+  
         <Image 
            source={require('@/assets/images/MainImage.jpg')} 
           style={styles.bannerImage}
           resizeMode="cover"
         />
 
-        {/* 3. Duration Section */}
+  
         <View style={styles.durationBadge}>
           <Text style={styles.durationText}>Six-Month Course</Text>
         </View>
 
-        {/* 4. Main Black Content Wrapper */}
+ 
         <View style={styles.contentBody}>
-          
-          {/* 5. Blue Title Card */}
+    
           <View style={styles.blueCard}>
             <Text style={styles.blueCardTitle}>canine obedience training</Text>
             <Text style={styles.blueCardSubtitle}>Course Fees: R1500</Text>
           </View>
 
-          {/* 6. Main Details Card */}
+        
           <View style={styles.detailsCard}>
             <Text style={styles.bodyTextRegular}>
               <Text style={styles.bodyTextBold}>Purpose:</Text> To teach effective dog obedience and behavioural training techniques.
@@ -64,11 +61,11 @@ export default function CoursesScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#cccccc', // Matches top header block background color
+    backgroundColor: '#cccccc', 
   },
   container: {
     flex: 1,
-    backgroundColor: '#000000', // Black background for the bottom content area
+    backgroundColor: '#000000', 
   },
   header: {
     backgroundColor: '#cccccc',
@@ -87,7 +84,7 @@ const styles = StyleSheet.create({
     height: 220,
   },
   durationBadge: {
-    backgroundColor: '#e60000', // Solid vibrant red
+    backgroundColor: '#e60000', 
     paddingVertical: 14,
     alignItems: 'center',
     justifyContent: 'center',
@@ -106,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   blueCard: {
-    backgroundColor: '#7ea4cb', // Light slate blue color matching image
+    backgroundColor: '#7ea4cb', 
     width: '100%',
     paddingVertical: 12,
     borderRadius: 25,
@@ -130,7 +127,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   detailsCard: {
-    backgroundColor: '#e9ecef', // Soft off-white / light gray card
+    backgroundColor: '#e9ecef', 
     width: '100%',
     borderRadius: 30,
     paddingVertical: 25,
